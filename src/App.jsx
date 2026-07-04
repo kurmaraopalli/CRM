@@ -29,11 +29,18 @@ function App() {
     event.preventDefault();
     if (!form.name.trim() || !form.email.trim()) return;
 
+    const formatCurrency = (val) => {
+      if (!val) return '$0';
+      const num = val.replace(/[^0-9]/g, '');
+      if (!num) return '$0';
+      return '$' + parseInt(num).toLocaleString();
+    };
+
     setContacts((current) => [
       {
         id: Date.now(),
         ...form,
-        value: form.value || '$0'
+        value: formatCurrency(form.value)
       },
       ...current
     ]);
@@ -66,7 +73,7 @@ function App() {
           <input value={form.company} onChange={(event) => setForm({ ...form, company: event.target.value })} placeholder="Company" />
           <input value={form.email} onChange={(event) => setForm({ ...form, email: event.target.value })} placeholder="Email" required />
           <input value={form.phone} onChange={(event) => setForm({ ...form, phone: event.target.value })} placeholder="Phone" />
-          <input value={form.value} onChange={(event) => setForm({ ...form, value: event.target.value })} placeholder="Deal value" />
+          <input value={form.value} onChange={(event) => setForm({ ...form, value: event.target.value })} placeholder="Deal value (e.g., 25000)" type="number" />
           <select value={form.status} onChange={(event) => setForm({ ...form, status: event.target.value })}>
             {stages.map((stage) => (
               <option key={stage} value={stage}>
