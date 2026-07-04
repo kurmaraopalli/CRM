@@ -14,6 +14,34 @@ This app is suitable for small businesses and service-based companies that need 
 
 It helps teams track leads, follow up with prospects, manage opportunities, and keep customer information in one place without needing a heavy enterprise CRM system.
 
+## Target Users
+
+### By Role
+- **Sales Representatives** – Track leads, manage personal pipeline, log activities, and track deal progress
+- **Sales Managers** – Monitor team performance, view pipeline analytics, track win rates, and forecast revenue
+- **Business Development Officers** – Manage prospects, identify opportunities, and track lead sources
+- **Account Executives** – Manage complex deals, track multiple contacts per company, log all interactions
+- **Small Business Owners** – Manage their own sales process, track leads, and maintain customer relationships
+
+### By Use Case
+Users of this app typically need to:
+- Track leads from first contact to closure
+- Log activities (calls, emails, meetings, notes)
+- Manage tasks and follow-ups with due dates
+- Monitor deal probability and expected closure dates
+- View sales pipeline value and analytics
+- Filter contacts by status and tags for quick access
+- Make informed sales decisions based on win rates and funnel data
+- Maintain a centralized database of all customer interactions
+
+### Ideal For
+- Sales teams at small-to-medium businesses
+- Teams without budget for expensive enterprise CRM systems (Salesforce, HubSpot)
+- Businesses transitioning from spreadsheets to CRM
+- Remote and distributed sales teams
+- Startups and early-stage companies
+- Organizations prioritizing simplicity over complexity
+
 ## What is included
 - A React + Vite front end
 - A contact management experience with mock CRM data
