@@ -3,10 +3,22 @@
 ## Overview
 This workspace now contains a lightweight CRM starter app that demonstrates a dashboard, contact form, searchable contact list, and a simple sales pipeline view.
 
+## Business purpose
+This app is suitable for small businesses and service-based companies that need a simple way to manage customer relationships and sales opportunities. It can be used by:
+- real estate agencies
+- marketing agencies
+- IT service companies
+- consulting firms
+- training providers
+- small retail and wholesale businesses
+
+It helps teams track leads, follow up with prospects, manage opportunities, and keep customer information in one place without needing a heavy enterprise CRM system.
+
 ## What is included
 - A React + Vite front end
 - A contact management experience with mock CRM data
 - A searchable contact list and kanban-style pipeline
+- Browser-based local storage for free-tier persistence
 - Automated tests with Vitest
 
 ## Local development
@@ -30,6 +42,23 @@ This project is set up for GitHub Pages deployment through GitHub Actions.
 5. The workflow will build and publish the site automatically.
 
 > If the repository name is not CRM, update the base path in [vite.config.js](vite.config.js) to match your repository name.
+
+## Architectural design
+The current app follows a simple client-side architecture:
+
+- Frontend: React with Vite for fast development and build performance
+- UI layout: sidebar navigation, dashboard summary cards, contact form, searchable contact list, and sales pipeline columns
+- State management: React component state with browser localStorage for free-tier persistence
+- Data flow: user actions update local state and are saved in the browser for future visits
+- Testing: Vitest with React Testing Library for component-level validation
+- Deployment: GitHub Pages via GitHub Actions for free hosting
+
+### Architecture overview
+1. User opens the app in a browser.
+2. The React UI renders the CRM dashboard and pipeline view.
+3. User adds or searches contacts through the form and list views.
+4. Data is stored in browser localStorage so no backend service is required.
+5. The app can be built and deployed as a static site.
 
 ## Next improvements
 - Connect the app to Firebase or Supabase for real persistence
