@@ -88,8 +88,35 @@ The current app follows a simple client-side architecture:
 4. Data is stored in browser localStorage so no backend service is required.
 5. The app can be built and deployed as a static site.
 
-## Next improvements
-- Connect the app to Firebase or Supabase for real persistence
-- Add authentication and protected routes
-- Add editing and deletion of contacts
-- Add drag-and-drop pipeline updates
+## Roadmap & Future Features
+
+### In Progress / High Priority
+- [ ] Edit and delete contacts
+- [ ] Activity logging (calls, emails, meetings, notes)
+- [ ] Task management with due dates and reminders
+- [ ] Deal probability tracking
+- [ ] Expected closure date tracking
+- [ ] Contact tagging and categorization
+- [ ] Advanced filtering by status and tags
+
+### Planned Features
+- [ ] Drag-and-drop pipeline for moving deals between stages
+- [ ] Sales funnel and pipeline analytics
+- [ ] Win/loss rate tracking
+- [ ] Revenue forecasting by stage
+- [ ] Custom fields for flexibility
+- [ ] Bulk import/export functionality
+- [ ] Email and calendar integration
+- [ ] Team collaboration and role-based access
+
+### Not Included (Out of Scope)
+- User authentication and multi-user access (authentication requires a backend)
+- Real-time database persistence (Firebase/Supabase requires paid services)
+- Mobile native app (web-responsive instead)
+
+## Technical Debt & Optimization
+- Migrate from browser localStorage to Firebase/Supabase for scalability
+- Add proper error handling and validation
+- Implement search indexing for faster filtering
+- Add keyboard shortcuts for power users
+- Performance optimization for large contact lists (1000+ records)
