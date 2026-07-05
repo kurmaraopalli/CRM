@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/CRM/',
+  build: {
+    outDir: 'docs'
+  },
   test: {
     environment: 'jsdom',
     globals: true,
